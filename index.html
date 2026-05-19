@@ -125,7 +125,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
   body {
     margin: 0;
     background: var(--bg);
@@ -318,10 +318,10 @@
   .menu-toggle span::after { top: 6px; }
 
   @media (max-width: 1024px) { .nav { gap: 24px; } }
+  @media (max-width: 1100px) { .header__cta .btn--primary { display: none; } }
   @media (max-width: 960px) {
     .nav, .header__phone { display: none; }
     .menu-toggle { display: inline-flex; }
-    .header__cta .btn--primary { display: none; }
   }
 
   /* Mobile menu drawer */
