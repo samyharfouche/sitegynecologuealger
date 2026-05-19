@@ -718,7 +718,7 @@
   .about__body p + p { margin-top: 16px; }
 
   /* ---------- Services ---------- */
-  .services { background: #FFFFFF; }
+  .services { background: #FFFFFF; overflow: hidden; }
   .services__head {
     display: flex;
     justify-content: space-between;
@@ -736,8 +736,8 @@
     border-radius: var(--r-lg);
     overflow: hidden;
   }
-  @media (max-width: 900px) { .services__grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) { .services__grid { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .services__grid { grid-template-columns: repeat(2, 1fr); } .service { padding: 26px 22px; } }
+  @media (max-width: 600px) { .services__grid { grid-template-columns: 1fr; } .service { padding: 24px 20px; } }
 
   .service {
     background: #FFFFFF;
@@ -745,6 +745,7 @@
     display: flex;
     flex-direction: column;
     min-height: 300px;
+    min-width: 0;
     position: relative;
     transition: background 0.3s;
   }
